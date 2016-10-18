@@ -49,7 +49,7 @@
 				<div class="content container 75%">
 					
 					<header>
-					
+
 						<!-- <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 							<div class="flipper">
 								<div class="front">
@@ -60,7 +60,13 @@
 								</div>
 							</div>
 						</div> -->
-						<img id="me_pic" src="images/me.png">
+						<section class="cardContainer">
+							<div id="card">
+								<figure class="front"><img id="me_pic" src="images/me2.png"></figure>
+								<figure class="back"><img id="me_pic2" src="images/me2.png"></figure>
+							</div>
+						</section>
+						
 					</header>
 					<div class="nameAndInfo">
 						<h2>Jose DeLavalle</h2>
@@ -108,6 +114,9 @@
 					<header>
 						<h2>What I Do</h2>
 					</header>
+
+					
+					
 					<p>I am a professional web developer and programmer with a passion for technology. I am proficient in the design, development, and deployment of modern, responsive web and desktop applications.</p><p><strong>Core Competencies:</strong><br>HTML, JavaScript, jQuery, AJAX, Angular JS, Node JS, Express JS, RESTful APIs, Java, C++, C#, PHP, ASP.NET, CSS, SASS, Bootstrap, MySQL, Oracle, JSON and XML</p>
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
@@ -133,7 +142,7 @@
 						Freelance Developer 2004 - present</p>
 						
 					</header>
-
+					
 					<!-- Lightbox Gallery  -->
 						<!--<div class="container 75% gallery">-->
 						<div class="container 75%">
@@ -141,11 +150,16 @@
 								<div class="6u 12u(mobile)"><a href="http://slickwebstudio.com" target="_blank" class="image fit from-left"><img src="images/thumbs/slickwebstudio.jpg" title="Slick Web Studio" alt="" /></a></div>
 								<div class="6u 12u(mobile)"><a href="http://bjones-spa.com" target="_blank" class="image fit from-right"><img src="images/thumbs/bjones.jpg" title="b.jones organic spa" alt="" /></a></div>
 							</div>
+							
+							<div class="row 0% images">
+								<div class="6u 12u(mobile)"><a href="http://slickwebstudio.com/ngGallery"  target="_blank" class="image fit from-left"><img src="images/thumbs/ngGallery.jpg" title="AngularJS RESTful Image Gallery" alt="" /></a></div>
+								<div class="6u 12u(mobile)"><a href="http://slickwebstudio.com/ngGraph"  target="_blank" class="image fit from-right"><img src="images/thumbs/ngGraph.jpg" title="AngularJS Charts and Graphs (World Population API)" alt="" /></a></div>
+							</div>
+
 							<div class="row 0% images">
 								<div class="6u 12u(mobile)"><a href="http://slickwebstudio.com/math"  target="_blank" class="image fit from-left"><img src="images/thumbs/math.jpg" title="My Daughters Math Trainer" alt="" /></a></div>
 								<div class="6u 12u(mobile)"><a href="http://spacecardanbikeusa.com"  target="_blank" class="image fit from-right"><img src="images/thumbs/spacecardan.jpg" title="Space Cardan Bike USA" alt="" /></a></div>
 							</div>
-
 							
 						</div>
 						<br><a href="#contact" class="button style2 down">More</a>
@@ -194,6 +208,7 @@
 						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
 						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> -->
+						<li><a href="https://github.com/josedelavalle" class="icon fa-github"><span class="label">GitHub</span></a></li>
 						<li><a href="https://www.linkedin.com/in/jose-delavalle-49aa7411a" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="http://www.indeed.com/r/Jose-DeLavalle/a640d41721993815" class="icon fa-user"><span class="label">Indeed</span></a></li>
 						<li><a href="mailto:me@slickwebstudio.com?Subject=Portfolio" class="icon fa-envelope"><span class="label">Email Me</span></a></li>
@@ -244,6 +259,21 @@
 
 
 				} );
+
+					var init = function() {
+					  var card = document.getElementById('card');
+					  
+					  document.getElementById('me_pic').addEventListener( 'mouseover', function(){
+					    card.toggleClassName('flipped');
+					  }, false);
+					  document.getElementById('me_pic2').addEventListener( 'mouseover', function(){
+					    card.toggleClassName('flipped');
+					  }, false);
+					};
+
+					window.addEventListener('DOMContentLoaded', init, false);
+
+
 					$("#submit_btn").click(function() { 
 					       
 					        var proceed = true;
