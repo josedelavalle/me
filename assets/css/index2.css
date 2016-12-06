@@ -1,0 +1,41 @@
+body, html {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-weight: 9000; }
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  background: transparent; }
+
+.text {
+  z-index: 2;
+  position: absolute;
+  background: rgba(0, 223, 180, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center; }
+
+.container {
+  /*position: relative;*/
+  height: 200px;
+  overflow: hidden;
+  background-image: url(../../images/me.jpg);
+  background-size: cover;
+  background-position: center bottom; }
+
+footer {
+  position: relative;
+  z-index: 3; }
