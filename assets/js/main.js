@@ -10,7 +10,18 @@
 	});
 
 	$(function() {
-
+		$.fn.goTo = function() {
+	        $('html, body').animate({
+	            scrollTop: $(this).offset().top + 'px'
+	        }, 'slow');
+	        $(this).focus();
+	        return this; // for chaining...
+	    };
+	    scrollToTop = function() {
+	    	$('html, body').animate({
+	    		scrollTop: '0px'
+	    	}, 'slow');
+	    };
 		var	$window = $(window),
 			$body = $('body'),
 			$header = $('#header'),
@@ -73,15 +84,15 @@
 				var on = function() {
 
 					// Generic sections.
-						$('.main.style1')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
+						// $('.main.style1')
+						// 	.scrollex({
+						// 		mode:		'middle',
+						// 		delay:		100,
+						// 		initialize:	function() { $(this).addClass('inactive'); },
+						// 		terminate:	function() { $(this).removeClass('inactive'); },
+						// 		enter:		function() { $(this).removeClass('inactive'); },
+						// 		leave:		function() { $(this).addClass('inactive'); }
+						// 	});
 
 						$('.main.style2')
 							.scrollex({

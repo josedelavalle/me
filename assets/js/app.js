@@ -27,6 +27,7 @@ app.controller('jdController', ['$scope', 'NgMap', 'VisitorService', function($s
 
 	$scope.toggleMap = function() {
 		$scope.showMap = !$scope.showMap;
+		scrollToTop();
 		NgMap.getMap().then(function(map) {
 	      map.setCenter(new google.maps.LatLng(20,0));
 	    });
