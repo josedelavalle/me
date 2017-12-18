@@ -1,3 +1,4 @@
+@import 'libs/animations';
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("font-awesome.min.css");
 
@@ -50,6 +51,34 @@
 		box-sizing: border-box;
 	}
 
+
+/* Map */
+	.map-container {
+		height: 500px;
+		background-color: rgba(255, 255, 255, 0.95);
+		transition: height 1s ease-in-out;
+	}
+	#map {
+		height: 500px !important;
+		width: 100%;
+		margin: 0 auto;
+		//padding: 3em 0 0 0;
+
+		//transition: all 1s ease-in-out;
+	}
+	.show-map {
+		cursor: pointer;
+	}
+	#close-map {
+		position: absolute;
+		top: 2.2em;
+		left: 10px;
+		font-size: 30px;
+		cursor: pointer;
+	}
+	.gm-style-mtc {
+		display: none;
+	}
 /* Containers */
 
 	.container {
@@ -2294,6 +2323,9 @@
 		position: relative;
 		margin: 0;
 		overflow-x: hidden;
+		// &.map-open {
+		// 	padding-top: 500px !important;
+		// }
 	}
 
 		.main.fullscreen {
@@ -2319,10 +2351,10 @@
 			}
 
 			.main.style1 .content {
-				-moz-transition: all 1s ease;
-				-webkit-transition: all 1s ease;
-				-ms-transition: all 1s ease;
-				transition: all 1s ease;
+				-moz-transition: all 0.5s ease;
+				-webkit-transition: all 0.5s ease;
+				-ms-transition: all 0.5s ease;
+				transition: all 0.5s ease;
 				-moz-transform: translateZ(0);
 				-webkit-transform: translateZ(0);
 				-ms-transform: translateZ(0);
@@ -2930,7 +2962,11 @@
 	}
 
 /* Work */
-
+	#work {
+		h2 {
+			padding-top: 1em;
+		}
+	}
 	#work .row.images .image {
 		-moz-transition: all 1s ease;
 		-webkit-transition: all 1s ease;
@@ -3489,8 +3525,17 @@
 		width:150px;
 	}
 
-
-
+	.overlay {
+		background: pink;
+		height: 100px;
+		width: 100px;
+		//width: 100%;
+		//position: absolute;
+		margin-top: -50px;
+		top: 0;
+		z-index: 9999;
+	}
+	
 // 	/* Carousel */
 
 // 	// Fonts

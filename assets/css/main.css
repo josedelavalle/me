@@ -1,5 +1,14 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("font-awesome.min.css");
+@keyframes animateheight {
+  from {
+    height: 0px; }
+  to {
+    height: 500px !important; } }
+
+.map-container {
+  animation: animateheight 1s ease-in-out; }
+
 /* Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -37,6 +46,30 @@ body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+/* Map */
+.map-container {
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: height 1s ease-in-out; }
+
+#map {
+  height: 500px !important;
+  width: 100%;
+  margin: 0 auto; }
+
+.show-map {
+  cursor: pointer; }
+
+#close-map {
+  position: absolute;
+  top: 2.2em;
+  left: 10px;
+  font-size: 30px;
+  cursor: pointer; }
+
+.gm-style-mtc {
+  display: none; }
 
 /* Containers */
 .container {
@@ -1555,10 +1588,10 @@ button.style2.down {
   height: 100%; }
 
 .main.style1 .content {
-  -moz-transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   -moz-transform: translateZ(0);
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -2027,6 +2060,9 @@ body {
   background-position: top left, center center; }
 
 /* Work */
+#work h2 {
+  padding-top: 1em; }
+
 #work .row.images .image {
   -moz-transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -2430,3 +2466,11 @@ body.is-touch .poptrox-popup .closer {
   border-radius: 50%;
   height: 150px;
   width: 150px; }
+
+.overlay {
+  background: pink;
+  height: 100px;
+  width: 100px;
+  margin-top: -50px;
+  top: 0;
+  z-index: 9999; }

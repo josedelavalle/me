@@ -5,6 +5,9 @@ body, html {
 h1 {
   font-weight: 9000; }
 
+section .about {
+  background-image: url("../images/me.jpg"); }
+
 video {
   position: absolute;
   top: 50%;
