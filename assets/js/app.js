@@ -1,4 +1,4 @@
-var app = angular.module('jdApp', ['ngMap', 'ngResource']);
+var app = angular.module('jdApp', ['ngMap', 'ngResource', 'ngAnimate']);
 
 app.service('VisitorService', function ($resource) {
 	return $resource('assets/visitors.json');

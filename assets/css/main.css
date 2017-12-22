@@ -1,13 +1,22 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("font-awesome.min.css");
-@keyframes animateheight {
+@keyframes animateheightopen {
   from {
     height: 0px; }
   to {
     height: 500px !important; } }
 
-.map-container {
-  animation: animateheight 1s ease-in-out; }
+@keyframes animateheightclose {
+  to {
+    height: 0px; }
+  from {
+    height: 500px !important; } }
+
+.map-container.ng-enter {
+  animation: animateheightopen 1s ease-in-out; }
+
+.map-container.ng-leave {
+  animation: animateheightclose 1s ease-in-out; }
 
 /* Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {

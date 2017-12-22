@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "angular": "^1.6.7",
+    "angular-animate": "^1.6.8",
     "angular-resource": "^1.6.7",
     "ngmap": "^1.18.4"
   }
